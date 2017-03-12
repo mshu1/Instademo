@@ -1,0 +1,6 @@
+framework module Pods_InstaDemo {
+  umbrella header "Pods-InstaDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
