@@ -63,6 +63,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     }
     
+    
+    @IBAction func onLogOut(_ sender: Any) {
+        PFUser.logOutInBackground { (error: Error?) in
+            if error != nil {
+                print("error")
+            } else {
+                self.dismiss(animated: false, completion: nil)
+            }
+        }
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if posts == nil {
             return 0
