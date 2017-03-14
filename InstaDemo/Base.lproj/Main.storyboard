@@ -166,7 +166,7 @@
         <!--Home View Controller-->
         <scene sceneID="X15-tA-jfb">
             <objects>
-                <viewController id="3Yu-kw-AOy" customClass="HomeViewController" customModule="InstaDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginSegue" id="3Yu-kw-AOy" customClass="HomeViewController" customModule="InstaDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dgn-Na-Un2"/>
                         <viewControllerLayoutGuide type="bottom" id="j1H-KA-G9G"/>
@@ -184,7 +184,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="297"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9fb-XT-fp4" id="aBv-f8-adT">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="296"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="296.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ILC-rf-7pU">
@@ -224,6 +224,7 @@
                     <tabBarItem key="tabBarItem" selectedImage="iconmonstr-home-10-72" systemItem="recents" id="f3C-b5-CQF"/>
                     <connections>
                         <outlet property="postTable" destination="b5U-hs-OkV" id="nID-RK-7A1"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="LoginSegue" id="04f-Gl-ZcE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xAZ-Mz-XFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -233,7 +234,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="vl0-d0-iRr">
             <objects>
-                <tabBarController id="a13-TZ-XHn" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="a13-TZ-XHn" sceneMemberID="viewController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="5xC-OW-uWh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>

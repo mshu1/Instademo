@@ -23,8 +23,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.clientKey = "myMasterKey" // set to nil assuming you have not set clientKey
                 configuration.server = "https://intense-ridge-75134.herokuapp.com/parse"
             })
+            
+            
             )
-    
+        if PFUser.current() != nil {
+            print("There is a current user!")
+            window = UIWindow(frame: UIScreen.main.bounds)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+            window?.rootViewController = tabBarController
+            window?.makeKeyAndVisible()
+        } else {
+            print ("No current user")
+        }
+        
         return true
     }
 

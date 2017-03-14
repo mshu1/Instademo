@@ -54,7 +54,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                         //Perform action on main thread
                         self.postTable.reloadData()
                     }
+                    print("reach1")
+
                     MBProgressHUD.hide(for: self.view, animated: true)
+                    print("reach2")
                     //print(self.posts as Any)
                 }
             }
@@ -69,7 +72,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             if error != nil {
                 print("error")
             } else {
-                self.dismiss(animated: false, completion: nil)
+                    self.performSegue(withIdentifier: "LoginSegue", sender: nil)
             }
         }
     }
